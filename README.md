@@ -73,7 +73,7 @@ Add this block to your `.gitlab-ci.yml`:
 yamllint:
   stage: lint
   variables:
-    yamllint_version: "3.6.1"
+    yamllint_version: "1.16.0"
   image: peterdavehello/yamllint
   only:
     changes:
@@ -83,14 +83,14 @@ yamllint:
     - find . -name "*.yml" -o -name "*.yaml" | xargs -n 1 yamllint
 ```
 
-Replace "3.6.1" with the version you want to use, use can also use "latest" for the very new version.
+Replace "1.16.0" with the version you want to use, use can also use "latest" for the very new version.
 
 ## Build
 
 Build command, you need to specify a valid yamllint version argument to `YAMLLINT_VERSION`:
 
 ```sh
-docker build --build-arg YAMLLINT_VERSION="3.6.1" -t docker-yamllint .
+docker build --build-arg YAMLLINT_VERSION="1.16.0" -t docker-yamllint .
 
 # Replace "docker-yamllint" with the preferred image name
 ```
