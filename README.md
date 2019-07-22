@@ -29,7 +29,8 @@ Dockerized [yamllint](https://github.com/adrienverge/yamllint) with various vers
 ```sh
 docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint YAML_FILE.yml
 
-# Please replace "$PATH_TO_YAML" with your custom path and replace "YAML_FILE.yml" with your real yaml file filename.
+# Please replace "$PATH_TO_YAML" with your custom path,
+# and replace "YAML_FILE.yml" with your real yaml file filename.
 ```
 
 #### Use specific version
@@ -39,7 +40,8 @@ Just like above, but you can specify version of yamllint, for example:
 ```sh
 docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint:1.16.0 YAML_FILE.yml
 
-# Please replace "1.16.0" with the version number you want. Don't forget to replace "$PATH_TO_YAML" & "YAML_FILE.yml".
+# Please replace "1.16.0" with the version number you want.
+# Don't forget to replace "$PATH_TO_YAML" & "YAML_FILE.yml".
 ```
 
 ### Continuous Integration (CI)
