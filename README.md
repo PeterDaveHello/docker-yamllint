@@ -74,7 +74,7 @@ yamllint:
   stage: lint
   variables:
     yamllint_version: "1.16.0"
-  image: peterdavehello/yamllint
+  image: peterdavehello/yamllint:$yamllint_version
   only:
     changes:
       - "**/*.yml"
