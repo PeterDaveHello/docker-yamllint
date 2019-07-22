@@ -83,7 +83,7 @@ yamllint:
     - find . -name "*.yml" -o -name "*.yaml" | xargs -n 1 yamllint
 ```
 
-Replace "1.16.0" with the version you want to use, use can also use "latest" for the very new version.
+Replace "1.16.0" with the version you want to use, you can also use "latest" for the very new version.
 
 ## Build
 
