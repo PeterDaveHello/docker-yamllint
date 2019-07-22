@@ -1,0 +1,41 @@
+---
+
+dist: bionic
+
+services:
+  - docker
+
+stages:
+  - Static test
+  - Build test
+
+jobs:
+  include:
+    - stage: Static test
+      env:
+        - Test: hadolint
+      language: minimal
+      script:
+        - docker run --rm -i hadolint/hadolint < Dockerfile
+
+    - stage: Static test
+      env:
+        - Test: dockerfile_lint
+      language: node_js
+      node_js:
+        - "8"
+      script:
+        - npx --cache .npx dockerfile_lint
+      cache:
+        directories:
+          - .npx
+
+    - stage: Build test
+      language: minimal
+      before_script:
+        - LATEST_YAMLLINT="$(curl https://pypi.org/pypi/yamllint/json -so- | jq -r .info.version)"
+        - export LATEST_YAMLLINT
+      script:
+        - docker build --build-arg YAMLLINT_VERSION="$LATEST_YAMLLINT" -t docker-yamllint:$TRAVIS_COMMIT .
+      after_success:
+        - docker run --rm docker-yamllint:$TRAVIS_COMMIT yamllint --version

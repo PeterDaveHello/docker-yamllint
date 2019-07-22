@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "latest" = "$DOCKER_TAG" ]; then
+    DOCKER_TAG=$(curl https://pypi.org/pypi/yamllint/json -sLo- | grep -Po '"version":"\d+\.\d+\.\d+"' | awk -F'"' '{print $4}')
+fi
+
+docker build --build-arg YAMLLINT_VERSION="$DOCKER_TAG" -f "$DOCKERFILE_PATH" -t "$IMAGE_NAME" .
