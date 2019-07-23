@@ -27,7 +27,7 @@ Dockerized [yamllint](https://github.com/adrienverge/yamllint) with various vers
 #### Use latest version
 
 ```sh
-docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint YAML_FILE.yml
+docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint yamllint YAML_FILE.yml
 
 # Please replace "$PATH_TO_YAML" with your custom path,
 # and replace "YAML_FILE.yml" with your real yaml file filename.
@@ -38,7 +38,7 @@ docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint YAML_FILE.yml
 Just like above, but you can specify version of yamllint, for example:
 
 ```sh
-docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint:1.16.0 YAML_FILE.yml
+docker run --rm -v $PATH_TO_YAML:/yaml peterdavehello/yamllint:1.16.0 yamllint YAML_FILE.yml
 
 # Please replace "1.16.0" with the version number you want.
 # Don't forget to replace "$PATH_TO_YAML" & "YAML_FILE.yml".
@@ -62,7 +62,7 @@ services:
   - docker
 
 scripts:
-  - docker run --rm -v $TRAVIS_BUILD_DIR:/yaml peterdavehello/yamllint:1.16.0 .travis.yml
+  - docker run --rm -v $TRAVIS_BUILD_DIR:/yaml peterdavehello/yamllint:1.16.0 yamllint .travis.yml
 ```
 
 This will lint the Travis CI config file `.travis.yml`
