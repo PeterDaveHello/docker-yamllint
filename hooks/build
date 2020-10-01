@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "latest" = "$DOCKER_TAG" ]; then
+if [ "latest" = "$DOCKER_TAG" ] && [ "master" = "$SOURCE_BRANCH" ]; then
     YAMLLINT_VERSION=$(curl https://pypi.org/pypi/yamllint/json -sLo- | grep -Po '"version":"\d+\.\d+\.\d+"' | awk -F'"' '{print $4}')
 else
     YAMLLINT_VERSION="$SOURCE_BRANCH"
