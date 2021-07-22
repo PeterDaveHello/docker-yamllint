@@ -11,4 +11,6 @@ WORKDIR /yaml
 
 RUN pip install --no-cache-dir yamllint=="$YAMLLINT_VERSION"
 
+USER nobody
+
 CMD [ "yamllint", "--version" ]
