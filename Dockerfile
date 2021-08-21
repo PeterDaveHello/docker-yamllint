@@ -1,4 +1,4 @@
-FROM python:3-alpine3.12
+FROM python:3-alpine3.14
 
 ARG YAMLLINT_VERSION
 
