@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.com/PeterDaveHello/docker-yamllint.svg?branch=master)](https://travis-ci.com/PeterDaveHello/docker-yamllint)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/peterdavehello/yamllint.svg)](https://hub.docker.com/r/peterdavehello/yamllint/)
-[![Docker image layers](https://images.microbadger.com/badges/image/peterdavehello/yamllint.svg)](https://microbadger.com/images/peterdavehello/yamllint/)
-[![Docker image version](https://images.microbadger.com/badges/version/peterdavehello/yamllint.svg)](https://hub.docker.com/r/peterdavehello/yamllint/tags/)
 
 [![Docker Hub badge](http://dockeri.co/image/peterdavehello/yamllint)](https://hub.docker.com/r/peterdavehello/yamllint/)
 
