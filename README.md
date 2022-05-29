@@ -1,6 +1,6 @@
 # docker-yamllint
 
-[![Build Status](https://travis-ci.com/PeterDaveHello/docker-yamllint.svg?branch=master)](https://travis-ci.com/PeterDaveHello/docker-yamllint)
+[![Build Status](https://app.travis-ci.com/PeterDaveHello/docker-yamllint.svg?branch=master)](https://app.travis-ci.com/PeterDaveHello/docker-yamllint)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/peterdavehello/yamllint.svg)](https://hub.docker.com/r/peterdavehello/yamllint/)
 
 [![Docker Hub badge](http://dockeri.co/image/peterdavehello/yamllint)](https://hub.docker.com/r/peterdavehello/yamllint/)
